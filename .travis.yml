@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-- '4.3'
-script: npm test
+  - '4.3'
+script:
+  - npm test
+before_deploy:
+  - npm package
 deploy:
   - provider: releases
     api_key:

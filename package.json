@@ -19,7 +19,8 @@
     "grunt-aws-lambda": "~0.13.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "package": "grunt lambda_package"
   },
   "author": "Selamanse <selamanse@scheinfrei.info>",
   "license": "UNLICENSED"
