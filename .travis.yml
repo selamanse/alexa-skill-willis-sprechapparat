@@ -9,7 +9,8 @@ deploy:
   - provider: releases
     api_key:
       secure: wIbM5CVwS6velO2shT5Nnw8ShnMHEfKSsbWdVkz9uEU2+UmqdNd9xn2ebfVf4cSd6J4vGMMDHgjcseLGsL1w4z/eJ+zw+ZjbB+6qe7JEDInGc2VU/m3ez1rbr00Cr2SiJoGXGfAJd1Ip+S41Lu9RWZY/ORUFC85900DdZCawQyjPIoDfmlsy0ZBCucJi5D/+/Krg3RPdpwfZD1h+kxZut3U0t2Ddt6mLoPzZpC78ItNWnUUXaH/G28e67BgNQmEh6+xa1TkIP5xgerQRHMNElqdatP3pO2T/qJG6HulvyLJm6K5ObPlSaJWgPDMU9UVaBxRCUGuAUPUsFixRM3oJBVBcBOb1+LOu128k8Q1POIAVOvuJ2vUFBGwxzuqj+hM4dFEj2Qk/U8zD/vhG1BubulPY9TvMwuVWlZMCGREFpjuXgQmjJ/niJb7dlJfgX2yteItcNlS4BEk9+0HFkjyBj/aqYueTAhgYCXs3gA2maU0PXtSBpH5Wy/K8nIV/xPpt4LJBlzGT2OcVj+RhfH5rI6RzyCDzCc2tNsGZ6obXuh3wwWN2ShN9NFGAY8MwzW66A17IKz+5Hdf0K3sN/HbZTywS0xWe4U4zWpe8O1DqDlfB9W8Y1cp5seD7WJGkKITe5lPbCW4x63LJhipItboZ96seoxPViHw6Geum87+UYY8=
-    file: dist/*.zip
+    file_glob: true
+    file: dist/*
     skip_cleanup: true
     on:
       repo: selamanse/alexa-skill-willis-sprechapparat
