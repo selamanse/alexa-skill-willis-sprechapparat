@@ -1,4 +1,24 @@
 language: node_js
 node_js:
-  - "4.3"
+- '4.3'
 script: npm test
+deploy:
+  - provider: releases
+    api_key:
+      secure: wIbM5CVwS6velO2shT5Nnw8ShnMHEfKSsbWdVkz9uEU2+UmqdNd9xn2ebfVf4cSd6J4vGMMDHgjcseLGsL1w4z/eJ+zw+ZjbB+6qe7JEDInGc2VU/m3ez1rbr00Cr2SiJoGXGfAJd1Ip+S41Lu9RWZY/ORUFC85900DdZCawQyjPIoDfmlsy0ZBCucJi5D/+/Krg3RPdpwfZD1h+kxZut3U0t2Ddt6mLoPzZpC78ItNWnUUXaH/G28e67BgNQmEh6+xa1TkIP5xgerQRHMNElqdatP3pO2T/qJG6HulvyLJm6K5ObPlSaJWgPDMU9UVaBxRCUGuAUPUsFixRM3oJBVBcBOb1+LOu128k8Q1POIAVOvuJ2vUFBGwxzuqj+hM4dFEj2Qk/U8zD/vhG1BubulPY9TvMwuVWlZMCGREFpjuXgQmjJ/niJb7dlJfgX2yteItcNlS4BEk9+0HFkjyBj/aqYueTAhgYCXs3gA2maU0PXtSBpH5Wy/K8nIV/xPpt4LJBlzGT2OcVj+RhfH5rI6RzyCDzCc2tNsGZ6obXuh3wwWN2ShN9NFGAY8MwzW66A17IKz+5Hdf0K3sN/HbZTywS0xWe4U4zWpe8O1DqDlfB9W8Y1cp5seD7WJGkKITe5lPbCW4x63LJhipItboZ96seoxPViHw6Geum87+UYY8=
+    file: dist/*.zip
+    on:
+      repo: selamanse/alexa-skill-willis-sprechapparat
+      tags: true
+  - provider: lambda
+    function_name: "Turner"
+    region: "us-east-1"
+    role: "arn:aws:iam::0123456789012:role/lambda_basic_execution"
+    runtime: "nodejs4.3"
+    handler_name: "handler"
+    access_key_id: "AKIAIFISK53W4EIWYDQQ"
+    publish: true
+    secret_access_key: "vL5+M1T5d0i8+sXPH/dsuHvf9wOtqkcvFJ8IoLeSkkoqhHPy/Ofq1CYyMkHcfRRlUwp+i95IKVXGkL7MA2/uoph6NOM2A8AV8Zdwbw5GU1QCcInPP34AHY9ed86S53Uhvdw+QTn4GOx7PXSI7DIXgFURe6zaSXxJaK7EEelRzwyz/JSUnAL4G5hB/mGvoTjURQMp9q6RUc8nyZHc8S4Bo13D8lelDUSjOBK/Nac6wAIrsZbcYqN11uxCjZnqBJduspnMFzPyJQDpF0W0zeOzo+PB/n2paMt7Pow8KB7BFvTJF1WKp/BORkQYlVJ4IslLgwthZjLaMtAv30KdAQC19GIcEtAD/Wzosw5pcOQ3JzF0jjm2Uc5Dwj8Xl9vyqo+mTKpFe+5AgiFArb7pWnupcD/e67l3Gk+FYU97hB0B9k5l73H5BJYnQ+TJr/YtH4r/3OsDs9WeJ4BrEg/RWvaUMqLJD4SmFGL9r4sa7k+1wz9gAteGnIlXVz/Wsn4XNb2N34pl4+vSHurBWYlCjdDaX5pfgmbGBYJbGpjSwtuzxusdkJFoUmCg9HGAN5bTAvqFv2YFwxP3ZCUyk/lmXRIDouCMTIyySMQLvWbsck72Qi3xUPK0rUCgo6RgOQXG2Xj3SjtgnNmHEbwxTgZ24PqqxkPRCfJnKfyhx8Wk5sL1nWI="
+    on:
+      repo: selamanse/alexa-skill-willis-sprechapparat
+      tags: true
