@@ -4,7 +4,7 @@ node_js:
 script:
   - npm test
 before_deploy:
-  - npm package
+  - npm run package
 deploy:
   - provider: releases
     api_key:
