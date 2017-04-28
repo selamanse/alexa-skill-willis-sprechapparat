@@ -38,9 +38,14 @@ const handlers = {
   'Turn': function () {
     var firstword = this.event.request.intent.slots.firstword.value
     var secondword = this.event.request.intent.slots.secondword.value
-    var turnsentence = firstword + ' ' + secondword
 
+    var turnsentence = firstword + ' ' + secondword
     console.log('user wants to turn: ' + turnsentence)
+
+    if (!secondword) {
+      this.emit(':ask', 'Ich habe leider nur ein Wort verstanden.', this.t('HELP_REPROMPT'))
+      return
+    }
 
     var turnerArr = []
     var turnedWords = []

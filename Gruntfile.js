@@ -24,8 +24,10 @@ module.exports = function (grunt) {
     },
     lambda_invoke: {
       default: {
+      },
+      error: {
         options: {
-          file_name: 'index.js'
+          event: 'event_error.json'
         }
       }
     },
