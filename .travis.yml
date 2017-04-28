@@ -18,7 +18,7 @@ deploy:
   - provider: lambda
     function_name: "Turner"
     region: "eu-west-1"
-    role: "arn:aws:iam::134174638311:role/service-role/default123"
+    role: "arn:aws:iam::134174638311:role/CustomAWSLambdaWriteLogs"
     runtime: "nodejs4.3"
     handler_name: "handler"
     access_key_id: "AKIAIFISK53W4EIWYDQQ"
