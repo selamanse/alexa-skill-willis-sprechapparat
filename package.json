@@ -1,6 +1,6 @@
 {
   "name": "alexa-skill-willis-sprechapparat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Willi Törner der einäugige Pirat hat eine seltene Krankheit mit dem Namen Törn-Syndrom. Bei dieser Krankheit muss er immer alle Wörter im Satz ab dem ersten Vokal vertauschen. Das geht ungefähr so: \"Feine Butter\" wird bei Wilhelm zu \"Beine Futter\". Benutze Willis Sprechapparat um lustige Sätze zu erzeugen.",
   "main": "index.js",
   "dependencies": {
