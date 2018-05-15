@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '4.3'
+  - '8.10'
 script:
   - npm test
 before_deploy:
@@ -19,7 +19,7 @@ deploy:
     function_name: "Turner"
     region: "eu-west-1"
     role: "arn:aws:iam::134174638311:role/CustomAWSLambdaWriteLogs"
-    runtime: "nodejs4.3"
+    runtime: "nodejs8.10"
     handler_name: "handler"
     access_key_id: "AKIAIFISK53W4EIWYDQQ"
     publish: true
