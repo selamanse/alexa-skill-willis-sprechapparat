@@ -6,10 +6,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt)
 
-  // Automatically load required Grunt tasks
-  require('jit-grunt')(grunt, {})
-
   grunt.loadNpmTasks('grunt-aws-lambda')
+  grunt.loadNpmTasks('grunt-standard')
 
   grunt.initConfig({
     standard: {
@@ -48,5 +46,5 @@ module.exports = function (grunt) {
     'lambda_invoke'
   ])
 
-  grunt.registerTask('deploy', ['lambda_package', 'lambda_deploy'])
+  grunt.registerTask('package', ['standard', 'lambda_package'])
 }

@@ -1,5 +1,5 @@
 /* eslint-disable  func-names */
-/* eslint quote-props: [2, "consistent"]*/
+/* eslint quote-props: [2, "consistent"] */
 
 /**
  * This is the code part of the Alexa Skill Willi Törners Sprechapparat
