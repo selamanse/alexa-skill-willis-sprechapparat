@@ -2,20 +2,24 @@
   "name": "alexa-skill-willis-sprechapparat",
   "version": "1.0.2",
   "description": "Willi Törner der einäugige Pirat hat eine seltene Krankheit mit dem Namen Törn-Syndrom. Bei dieser Krankheit muss er immer alle Wörter im Satz ab dem ersten Vokal vertauschen. Das geht ungefähr so: \"Feine Butter\" wird bei Wilhelm zu \"Beine Futter\". Benutze Willis Sprechapparat um lustige Sätze zu erzeugen.",
+  "repository": "",
   "main": "index.js",
   "dependencies": {
-    "alexa-sdk": "~1.0.25",
-    "aws-sdk": "~2.227.1"
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.19.0",
+    "aws-sdk": "^2.326.0",
+    "i18next": "^15.0.5"
   },
   "devDependencies": {
-    "grunt": "~1.0.1",
-    "grunt-standard": "~3.1.0",
-    "time-grunt": "~1.4.0",
-    "grunt-aws-lambda": "~0.13.0"
+    "ava": "^3.0.0",
+    "bestzip": "^2.1.5",
+    "standard": "^14.3.1"
   },
   "scripts": {
-    "test": "grunt",
-    "package": "grunt package"
+    "lint": "standard --fix",
+    "test": "npm run lint && ava --verbose",
+    "package": "npm run test && npm run zip",
+    "zip": "bestzip dist/alexa-skill-lambda.zip index.js"
   },
   "author": "Selamanse <selamanse@scheinfrei.info>",
   "license": "UNLICENSED"
