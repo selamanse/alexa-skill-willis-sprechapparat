@@ -19,7 +19,7 @@ deploy:
     function_name: "Turner"
     region: "eu-west-1"
     role: "arn:aws:iam::134174638311:role/CustomAWSLambdaWriteLogs"
-    runtime: "nodejs8.10"
+    runtime: "nodejs12.x"
     handler_name: "handler"
     access_key_id: "AKIAIFISK53W4EIWYDQQ"
     publish: true
