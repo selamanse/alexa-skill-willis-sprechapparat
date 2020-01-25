@@ -16,8 +16,7 @@
     "standard": "^14.3.1"
   },
   "scripts": {
-    "lint": "standard --fix",
-    "test": "npm run lint && ava --verbose",
+    "test": "standard --fix && ava --verbose",
     "package": "npm run test && npm run zip",
     "zip": "bestzip dist/alexa-skill-lambda.zip index.js"
   },
