@@ -23,6 +23,7 @@ deploy:
     handler_name: "handler"
     access_key_id: "AKIAIFISK53W4EIWYDQQ"
     publish: true
+    zip: ./dist
     secret_access_key:
       secure: ZrzmigFbaUkixdu6ZiFHlyhPvfozCEk0QmdORqmFCmxgGIpwrk63Sg+kQOe2oKNV0pXGXDIEe0zn1NPTdSDuIQX1zdN8J2GGR17fuy+G7wYNadfDoAbimlMQ2m84yhZQ8U3HJzZnUAo4lIoEOhvYAb+8bimH8XEHv8fUHqpZEXDd0RXugCelUjPSojgeq1t7iqH7xn1KiRjwivWCtF+5F4W6kZaLn9yEIRfRDP40GgNrBcGIbGhxZ6O0ccDCmPKvHMunCvW1OZ6I3xR0LasrY4MQ9KopkMxajI0N6a3yqDKQAqNHhCtrzO2baOyrn5yBnOlSGkmq5D9/qOQcR3UXKVu/YggTi9q0IQmwen2kS7m2baGGTmfdPYsj3joMC2Ct/WRqMn+bcc5KYZgmqWse3K3ojPqHyjhsaSpkZNEZ0STMOXS/skiRWBzt3fUAiWXQNIJRLPMP3wuhI6yQZ2qmkRA9BR5lcmNkEKb3h4wE/oR66p8sge/wQr+VlApdO9YG1yP8pj5Xr26SUFuNlf95iso3ky2+nE4cbDSoCcyX96RTermhP0yBoRuq4L04nCsU6TWjzxZtWuSyn6F83Fz4U9dY19GrSWpKFwcflq4AW1aEjjJO6OMjPfz9Qr9QHFVA0M1E1eiID2zOMbYthfvm8nt88JleuLmhs+9iTLwKlwk=
     on:
