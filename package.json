@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "standard && ava --verbose",
-    "package": "rm -rf node_modules && rm -rf dist && mkdir dist && npm install --omit=dev && cp index.js dist/ && cp -r node_modules dist"
+    "package": "rm -rf node_modules && rm -rf dist && mkdir dist && npm install --omit=dev && cp index.js dist/ && cp -r node_modules dist && cd dist && zip -r function.zip ."
   },
   "author": "Selamanse <selamanse@scheinfrei.info>",
   "license": "UNLICENSED"
