@@ -47,6 +47,6 @@ jobs:
           zip_file: dist/function.zip
           memory_size: 128
           timeout: 10
-          handler: handler
+          handler: index.handler
           role: arn:aws:iam::134174638311:role/CustomAWSLambdaWriteLogs
           runtime: nodejs16.x
