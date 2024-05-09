@@ -31,13 +31,13 @@ const languageStrings = {
 const vowels = ['a', 'e', 'i', 'o', 'u', 'ä', 'ö', 'ü']
 
 const splitVowel = function (word) {
-  var index = indexOfVowel(word)
+  const index = indexOfVowel(word)
   return [word.substring(0, index), word.substring(index)]
 }
 
 const indexOfVowel = function (word) {
   if (word.length > 1) {
-    for (var i = 0; i < word.length; i++) {
+    for (let i = 0; i < word.length; i++) {
       if (isVowel(word[i])) {
         return i
       }
@@ -48,7 +48,7 @@ const indexOfVowel = function (word) {
 
 const isVowel = function (char) {
   if (char.length === 1) {
-    for (var i = 0; i < vowels.length; i++) {
+    for (let i = 0; i < vowels.length; i++) {
       if (vowels[i] === char) {
         return true
       }
