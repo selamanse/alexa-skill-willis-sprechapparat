@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #checkout and build
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '22.x'
+          node-version: '24.x'
       - run: npm ci
       - run: npm test
       - run: npm run package
@@ -48,4 +48,4 @@ jobs:
           timeout: 10
           handler: index.handler
           role: arn:aws:iam::134174638311:role/CustomAWSLambdaWriteLogs
-          runtime: nodejs16.x
+          runtime: nodejs24.x
