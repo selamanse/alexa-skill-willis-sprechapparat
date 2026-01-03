@@ -157,17 +157,16 @@ const ErrorHandler = {
 
 // This request interceptor will bind a translation function 't' to the handlerInput
 const LocalisationRequestInterceptor = {
-  process (handlerInput) {
-    i18n.init({
+  async process (handlerInput) {
+    const t = await i18n.init({
       lng: Alexa.getLocale(handlerInput.requestEnvelope),
       resources: languageStrings
-    }).then((t) => {
-      handlerInput.t = (...args) => t(...args)
     })
+    handlerInput.t = (...args) => t(...args)
   }
 }
 
-exports.handler = Alexa.SkillBuilders.custom()
+const skillBuilder = Alexa.SkillBuilders.custom()
   .withSkillId(APP_ID)
   .addRequestHandlers(
     LaunchRequestHandler,
@@ -179,4 +178,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     ErrorHandler)
   .addRequestInterceptors(
     LocalisationRequestInterceptor)
-  .lambda()
+
+exports.handler = async (event, context) => {
+  return skillBuilder.create().invoke(event, context)
+}
